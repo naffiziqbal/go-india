@@ -7,6 +7,7 @@ import React from "react";
 
 const page = async () => {
   const data = await getData();
+  //* =========Tab Options
   const tabs = [
     {
       id: "tab1",

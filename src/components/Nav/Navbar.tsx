@@ -5,13 +5,15 @@ import { RxAvatar } from "react-icons/rx";
 import Navlinks from "./Navlinks";
 
 const Navbar = () => {
-  const [navOpen, setNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false); //? Nav Action
   return (
     <div
       className={` lg:relative absolute h-screen duration-500 z-50 ${
         navOpen ? "md:w-1/3  w-1/2" : "w-0"
       }  bg-blue-500 text-white border `}
     >
+      {/* Action Button ========================================== */}
+
       <div className="absolute -right-5 top-1/2 -translate-y-1/2">
         <button
           onClick={() => setNavOpen(!navOpen)}
@@ -27,6 +29,8 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Users ========================================== */}
+
       <section
         className={`flex items-center justify-around min-h-16 hover:bg-blue-900 *:cursor-pointer duration-300 ${
           navOpen ? "" : "hidden"
@@ -39,6 +43,7 @@ const Navbar = () => {
         <BiBell className="w-6 h-6" />
       </section>
       <hr className="" />
+      {/* Nav Links========================================== */}
       <section className={`${navOpen ? "" : "hidden"} duration-300`}>
         <Navlinks />
       </section>

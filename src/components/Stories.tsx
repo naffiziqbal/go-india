@@ -36,7 +36,7 @@ const Stories = () => {
 
       {/* Posts ================*/}
 
-      <div className="flex flex-col justify-center items-center gap-6 *:shadow *:py-1 hover:*:shadow-md hover:*:shadow-slate-400 *:duration-300 *:rounded w-full *:border">
+      <div className="flex flex-col justify-center items-center gap-6 *:shadow *:py-1 hover:*:shadow-md hover:*:shadow-slate-400 *:duration-300 *:rounded w-full *:border my-4">
         {stories.map((stroy, idx) => (
           <div key={idx} className="[&:nth-child(1)]:px-0 md:w-80 w-full ">
             <Image

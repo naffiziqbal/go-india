@@ -3,14 +3,9 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export const Tabs = ({ tabs, defaultSelectedTab }: any) => {
-  const router = useRouter();
   const [selectedTab, setSelectedTab] = useState(
     defaultSelectedTab || tabs[0].id
   );
-
-  const handleClick = (id: any) => {
-    setSelectedTab(id);
-  };
 
   return (
     <div className="w-full">
@@ -22,11 +17,12 @@ export const Tabs = ({ tabs, defaultSelectedTab }: any) => {
               selectedTab === tab.id ? "active" : ""
             }`}
           >
-            <button onClick={() => handleClick(tab.id)}>{tab.title}</button>
+            <button onClick={() => setSelectedTab(tab.id)}>{tab.title}</button>
           </li>
         ))}
       </ul>
-      <div className="tabs__content">
+      {/* Tab Content ============================== */}
+      <div>
         {tabs.map((tab: any) => (
           <div
             key={tab.id}
