@@ -2,21 +2,20 @@
 import React, { useState } from "react";
 import { BiArrowBack, BiBell } from "react-icons/bi";
 import { RxAvatar } from "react-icons/rx";
-import NavAction from "./UI/Buttons/NavAction";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
   console.log(navOpen);
   return (
     <div
-      className={` md:relative absolute h-screen duration-500 z-50 ${
-        navOpen ? "md:w-[50rem] w-1/2" : "w-0"
-      }  bg-blue-900 border  text-white`}
+      className={` lg:relative absolute h-screen duration-500 z-50 ${
+        navOpen ? "md:w-[25rem] lg:[50rem] w-1/2" : "w-0"
+      }  bg-blue-500 text-white border `}
     >
       <div className="absolute -right-5 top-1/2 -translate-y-1/2">
         <button
           onClick={() => setNavOpen(!navOpen)}
-          className="bg-blue-600 opacity-25 hover:opacity-100 duration-500 rounded text-white"
+          className="bg-blue-600  opacity-25 hover:opacity-100 duration-500 rounded text-white"
         >
           <BiArrowBack
             className={` rounded ${
@@ -28,13 +27,18 @@ const Navbar = () => {
         </button>
       </div>
 
-      <section className="flex items-center justify-around min-h-16">
-        <RxAvatar className="w-8 h-8" />
-        <p>
+      <section
+        className={`flex items-center justify-around min-h-16 ${
+          navOpen ? "" : "hidden"
+        }`}
+      >
+        <span className="flex items-center gap-2">
+          <RxAvatar className="w-8 h-8" />
           Hello, <strong>User</strong>
-        </p>
+        </span>
         <BiBell className="w-6 h-6" />
       </section>
+      <hr className="" />
     </div>
   );
 };
