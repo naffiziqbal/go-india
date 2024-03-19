@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Nav/Navbar";
 import Stories from "@/components/Stories";
 import { Tabs } from "@/components/Tabs/Tabs";
 import { getData } from "@/utils/getData";
@@ -12,7 +12,7 @@ const page = async () => {
       id: "tab1",
       title: (
         <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
-          Disscussion Forum
+          Discussion Forum
         </h2>
       ),
       content: <Card data={data} />,
