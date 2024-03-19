@@ -3,7 +3,7 @@ import React from "react";
 
 const Stories = () => {
   return (
-    <div className="md:max-w-2xl">
+    <div className="md:max-w-2xl max-h-screen overflow-auto min-w-fit">
       <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
         Market Stories
       </h2>

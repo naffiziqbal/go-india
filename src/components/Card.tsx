@@ -7,7 +7,7 @@ import { BsEye } from "react-icons/bs";
 
 const Card = ({ data }: any) => {
   return (
-    <div className="px-3 w-full">
+    <div className="px-3 w-full h-screen overflow-auto">
       <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
         Disscussion Forum
       </h2>
