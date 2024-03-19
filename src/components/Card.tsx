@@ -8,10 +8,13 @@ import { BsEye } from "react-icons/bs";
 const Card = ({ data }: any) => {
   return (
     <div className="px-3 w-full">
+      <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
+        Disscussion Forum
+      </h2>
       {data?.map((data: ICard) => (
         <div
           key={data.id}
-          className="flex  my-5 flex-1 min-h-20 shadow  hover:shadow-slate-300 duration-500 hover:shadow-2xl rounded-md px-3 max-w-2xl mx-auto p-3"
+          className="flex  my-5 flex-1 min-h-20 shadow  hover:shadow-slate-300 duration-500 hover:shadow-2xl rounded-md px-3 p-3 max-w-2xl"
         >
           <Image
             className="w-fit h-fit mix-blend-screen bg-white rounded-full"
