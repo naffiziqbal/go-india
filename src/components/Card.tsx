@@ -5,7 +5,80 @@ import React from "react";
 import { BiComment, BiHeart, BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
 
-const Card = ({ data }: any) => {
+const Card = () => {
+  const data = [
+    {
+      id: 1,
+      image:
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      title: "This is a Title of Forum",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, natus minus. Rem cumque ea consectetur aspernatur repellendus dolorem voluptate cum reprehenderit ab maiores maxime explicabo repudiandae, perspiciatis delectus ad velit.",
+      creationTime: "2mins Ago",
+      comments: 2,
+      likes: 2,
+      shareAbleLink: "something.com",
+      views: 4,
+      tag: "sector 2",
+    },
+    {
+      id: 2,
+      image:
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      title: "This is a Title of Forum",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, natus minus. Rem cumque ea consectetur aspernatur repellendus dolorem voluptate cum reprehenderit ab maiores maxime explicabo repudiandae, perspiciatis delectus ad velit.",
+      creationTime: "2mins Ago",
+      comments: 2,
+      likes: 2,
+      shareAbleLink: "something.com",
+      views: 4,
+      tag: "sector 2",
+    },
+    {
+      id: 3,
+      image:
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      title: "This is a Title of Forum",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, natus minus. Rem cumque ea consectetur aspernatur repellendus dolorem voluptate cum reprehenderit ab maiores maxime explicabo repudiandae, perspiciatis delectus ad velit.",
+      creationTime: "2mins Ago",
+      comments: 2,
+      likes: 2,
+      shareAbleLink: "something.com",
+      views: 4,
+      tag: "sector 2",
+    },
+    {
+      id: 4,
+      image:
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      title: "This is a Title of Forum",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, natus minus. Rem cumque ea consectetur aspernatur repellendus dolorem voluptate cum reprehenderit ab maiores maxime explicabo repudiandae, perspiciatis delectus ad velit.",
+      creationTime: "2mins Ago",
+      comments: 2,
+      likes: 2,
+      shareAbleLink: "something.com",
+      views: 4,
+      tag: "sector 2",
+    },
+    {
+      id: 5,
+      image:
+        "https://png.pngtree.com/png-vector/20190710/ourmid/pngtree-user-vector-avatar-png-image_1541962.jpg",
+      title: "This is a Title of Forum",
+      description:
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, natus minus. Rem cumque ea consectetur aspernatur repellendus dolorem voluptate cum reprehenderit ab maiores maxime explicabo repudiandae, perspiciatis delectus ad velit.",
+      creationTime: "2mins Ago",
+      comments: 2,
+      likes: 2,
+      shareAbleLink: "something.com",
+      views: 4,
+      tag: "sector 2",
+    },
+  ];
+
   return (
     <div className="px-3 w-full h-screen overflow-auto">
       <h2 className="md:block hidden uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">

@@ -2,11 +2,9 @@ import Card from "@/components/Card";
 import Navbar from "@/components/Nav/Navbar";
 import Stories from "@/components/Stories";
 import { Tabs } from "@/components/Tabs/Tabs";
-import { getData } from "@/utils/getData";
 import React from "react";
 
 const page = async () => {
-  const data = await getData();
   //* =========Tab Options
   const tabs = [
     {
@@ -16,7 +14,7 @@ const page = async () => {
           Discussion Forum
         </h2>
       ),
-      content: <Card data={data} />,
+      content: <Card />,
     },
     {
       id: "tab2",
@@ -29,13 +27,12 @@ const page = async () => {
     },
   ];
   return (
-    <div className="flex flex-row *:duration-500 m-0 p-0">
-      <Navbar />
+    <div className="flex flex-row *:duration-500 m-0 p-0 w-full">
       <div className="md:hidden w-full h-screen overflow-auto">
         <Tabs tabs={tabs} defaultSelectedTab="tab1" />
       </div>
       <div className="md:flex hidden md:flex-row flex-col gap-6 *:duration-500 md:h-screen overflow-hidden justify-between w-full mx-auto">
-        <Card data={data} />
+        <Card />
         <Stories />
       </div>
     </div>

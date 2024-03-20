@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-
+import Navbar from "@/components/Nav/Navbar";
 
 export const metadata: Metadata = {
   title: "Stock Forum",
@@ -14,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="lg:container mx-auto">{children}</body>
+      <body className="container mx-auto flex flex-row ">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
