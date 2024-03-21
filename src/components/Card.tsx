@@ -90,7 +90,7 @@ const Card = () => {
       {data?.map((data: ICard) => (
         <div
           key={data.id}
-          className="flex my-5 flex-1 min-h-20 shadow  hover:shadow-slate-300 duration-500 hover:shadow-2xl rounded-md md:px-3 md:p-3 py-3 max-w-2xl"
+          className="flex  mb-12 mt-5 flex-1 min-h-20 shadow-[4px_2px_10px_1px_rgba(0,0,0,0.5)]  hover:shadow-slate-900 duration-500  rounded-md md:px-3 md:p-3 py-3 max-w-2xl"
         >
           <Image
             className="w-fit h-fit mix-blend-screen bg-white rounded-full"
