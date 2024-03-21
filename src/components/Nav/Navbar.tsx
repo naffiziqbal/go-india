@@ -10,14 +10,14 @@ const Navbar = () => {
     <div
       className={` lg:relative absolute h-screen duration-500 z-50 ${
         navOpen ? "md:w-1/3  w-1/2" : "w-0"
-      }  bg-blue-500 text-white border `}
+      }  bg-blue-950 text-white `}
     >
       {/* Action Button ========================================== */}
 
       <div className="absolute -right-5 top-1/2 -translate-y-1/2">
         <button
           onClick={() => setNavOpen(!navOpen)}
-          className="bg-blue-600  opacity-25 hover:opacity-100 duration-500 rounded text-white"
+          className="bg-blue-950  opacity-25 hover:opacity-100 duration-500 rounded text-white"
         >
           <BiArrowBack
             className={` rounded ${
@@ -32,7 +32,7 @@ const Navbar = () => {
       {/* Users ========================================== */}
 
       <section
-        className={`flex items-center justify-around min-h-16 hover:bg-blue-900 *:cursor-pointer duration-300 ${
+        className={`flex items-center justify-around min-h-16 hover:bg-slate-900 *:cursor-pointer duration-300 ${
           navOpen ? "" : "hidden"
         }`}
       >

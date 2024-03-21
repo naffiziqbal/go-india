@@ -9,15 +9,22 @@ export const Tabs = ({ tabs, defaultSelectedTab }: any) => {
 
   return (
     <div className="w-full">
-      <ul className=" flex justify-between">
+      <ul className=" flex items-center justify-center w-full">
         {tabs.map((tab: any) => (
           <li
             key={tab.id}
-            className={`tabs__nav-item ${
-              selectedTab === tab.id ? "active" : ""
+            className={`w-full h-full flex justify-center duration-500  ${
+              selectedTab === tab.id
+                ? "active bg-blue-950 w-full border-b-4 border-b-red-500 "
+                : "bg-blue-900 w-full h-full border-b-4"
             }`}
           >
-            <button onClick={() => setSelectedTab(tab.id)}>{tab.title}</button>
+            <button
+              className="w-full h-full"
+              onClick={() => setSelectedTab(tab.id)}
+            >
+              {tab.title}
+            </button>
           </li>
         ))}
       </ul>
@@ -28,7 +35,7 @@ export const Tabs = ({ tabs, defaultSelectedTab }: any) => {
             key={tab.id}
             className={` ${
               selectedTab === tab.id
-                ? "active  flex justify-center items-center"
+                ? "active flex justify-center items-center"
                 : "hidden"
             }`}
           >

@@ -10,16 +10,16 @@ const page = async () => {
     {
       id: "tab1",
       title: (
-        <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
+        <div className="uppercase text-white font-semibold  py-4 w-full">
           Discussion Forum
-        </h2>
+        </div>
       ),
       content: <Card />,
     },
     {
       id: "tab2",
       title: (
-        <h2 className="uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
+        <h2 className="uppercase text-white font-semibold  py-4  w-full px-4 ">
           Stories
         </h2>
       ),

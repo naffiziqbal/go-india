@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="container mx-auto flex flex-row ">
+      <body className="lg:container mx-auto flex flex-row ">
         <Navbar />
         {children}
       </body>

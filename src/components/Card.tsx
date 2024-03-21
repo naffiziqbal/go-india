@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { BiComment, BiHeart, BiShare } from "react-icons/bi";
 import { BsEye } from "react-icons/bs";
+import Heart from "./Ui/Heart";
 
 const Card = () => {
   const data = [
@@ -81,7 +82,7 @@ const Card = () => {
 
   return (
     <div className="px-3 w-full h-screen overflow-auto">
-      <h2 className="md:block hidden uppercase text-blue-500 font-semibold  py-4 bg-slate-100 w-fit px-4 ">
+      <h2 className="md:block hidden uppercase text-red-500 font-semibold  py-4 bg-slate-100 w-fit px-4 text-2xl">
         Disscussion Forum
       </h2>
 
@@ -104,11 +105,11 @@ const Card = () => {
                 <h3 className="md:text-xl font-semibold w-fit">
                   {data?.title}
                 </h3>
-                <p className="capitalize text-nowrap md:text-sm text-xs py-1 bg-blue-500 rounded-full text-white h-fit px-3">
+                <p className="capitalize text-nowrap md:text-sm text-xs py-1 bg-blue-700 rounded-full text-white h-fit px-3">
                   {data.tag}
                 </p>
               </span>
-              <span className="text-nowrap text-blue-500 font-semibold text-end w-fit md:text-sm text-xs">
+              <span className="text-nowrap text-blue-700 font-semibold text-end w-fit md:text-sm text-xs">
                 {data.creationTime}
               </span>
             </div>
@@ -117,7 +118,7 @@ const Card = () => {
             {/* Actions ==================================== */}
             <div className="flex justify-around my-3 *:text-lg *:cursor-pointer">
               <span className="flex items-center">
-                <BiHeart /> {data.likes}K
+                <Heart likes={data.likes} />
               </span>
               <span className="flex items-center">
                 <BsEye /> {data.likes}K
